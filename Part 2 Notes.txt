@@ -1,0 +1,29 @@
+
+- First run of basic analyses shows smaller tasks less likely to be accepted than medium
+- Similarly, category 5 tasks less likely, cat 3 most likely
+- Unlike my initial assumption, DOW is not important
+- TOD is basically a before-or-after midday split: after midday much more likely to be accepted
+	- Could be turned into boolean (after midday t/f)
+
+- Looking at long/lat data, see that there are 3 regions (potentially different cities in Aus or countries e.g. Aus, NZ, SEA)
+- Using Region as a calculated field + then filter, see there is different change in behaviour between regions
+	- Small difference in DOW
+	- Bigger difference in category
+- Split category by regions but little difference
+- Not much difference with category by size either
+
+- Looking at number of tradies, far less tradies in category 5 but similar number of impressions
+	- Result in high impression/tradie but low acceptance rate
+
+
+## Which parameters influence if a job would be accepted?
+
+Based on the above, the key parameters would be:
+	- Size of the job
+	- Whether the job is after midday or not
+	- Category / number of tradies
+	- Region
+	
+To understand the impact each of these has on probability of acceptance, 
+best approach would be logistic regression analysis (due to binary acceptance) with these parameters
+	
